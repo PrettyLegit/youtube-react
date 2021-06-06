@@ -2,11 +2,18 @@ import React from "react";
 
 const Video = (props) => {
   return (
-    <div>
-      <img src={props.thumbnail.url} alt={props.title} />
-      <h2>{props.title}</h2>
-      <h3>{props.dateAdded}</h3>
-      <h3>{props.channel}</h3>
+    <div className="video-container">
+      <div className="video-image">
+
+          <img src={props.thumbnail} alt={props.title} />
+      </div>
+      <div className="video-info">
+
+          <h3>{props.title}</h3>
+          <h4>{props.dateAdded}</h4>
+          <h4>{props.channel}</h4>
+          <p>{props.description}</p>
+      </div>
      
     </div>
   )

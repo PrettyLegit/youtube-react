@@ -4,12 +4,12 @@ import axios from "axios";
 
 const SearchArea = () => {
 
-  const [keyword, setKeyword] = useState("words");
+  const [keyword, setKeyword] = useState("budgies");
   const [videos, setVideos] = useState([]);
 
   function requestSearch(){
     axios.get(
-      `https://youtube.googleapis.com/youtube/v3/search?type=video&part=snippet&maxResults=25&q=25&key=${process.env.API_KEY}`)
+      `https://youtube.googleapis.com/youtube/v3/search?type=video&q=budgies&part=snippet&maxResults=25&key=${process.env.API_KEY}`)
     .then((res) => {
       const {items} = res.data;
       console.log(items);

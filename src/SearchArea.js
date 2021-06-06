@@ -9,7 +9,7 @@ const SearchArea = () => {
 
   function requestSearch(){
     axios.get(
-      'https://youtube.googleapis.com/youtube/v3/search?type=video&part=snippet&maxResults=25&q=25&key=AIzaSyAx1Xaqq0PSiqjf09xI5SX1F-m765-Bdgs')
+      `https://youtube.googleapis.com/youtube/v3/search?type=video&part=snippet&maxResults=25&q=25&key=${process.env.API_KEY}`)
     .then((res) => {
       const {items} = res.data;
       console.log(items);
@@ -35,5 +35,3 @@ const SearchArea = () => {
 }
 
 export default SearchArea;
-//API_KEY=AIzaSyAx1Xaqq0PSiqjf09xI5SX1F-m765-Bdgs
-//${process.env.API_KEY}

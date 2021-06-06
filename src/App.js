@@ -9,7 +9,7 @@ const App = () => {
       <header>
         <a href="/">BruhTube</a>
       </header>
-      <SearchArea></SearchArea>
+      <SearchArea/>
       <Video
         title="The Best Video"
         dateAdded="2 days ago"

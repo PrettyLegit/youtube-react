@@ -10,7 +10,7 @@ const Results = ({ videos }) => {
             key={video.id.videoId}
             title={video.snippet.title}
             dateAdded={video.snippet.publishedAt}
-            thumbnails={video.snippet.thumbnail.medium}
+            thumbnail={video.snippet.thumbnails.medium}
             channel={video.snippet.channelTitle}
             description={video.snippet.description}
           />

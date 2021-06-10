@@ -1,22 +1,20 @@
 import React from "react";
+import {Link} from "@reach/router";
 
 const Video = (props) => {
   return (
-    <div className="video-container">
+    <Link to = {`/watch/${props.id}`} className="video-container">
       <div className="video-image">
-
-          <img src={props.thumbnail} alt={props.title} />
+        <img src={props.thumbnail} alt={props.title} />
       </div>
       <div className="video-info">
-
-          <h3>{props.title}</h3>
-          <h4>{props.dateAdded}</h4>
-          <h4>{props.channel}</h4>
-          <p>{props.description}</p>
+        <h3>{props.title}</h3>
+        <h4>{props.dateAdded}</h4>
+        <h4>{props.channel}</h4>
+        <p>{props.description}</p>
       </div>
-     
-    </div>
-  )
+    </Link>
+  );
 };
 
 export default Video;

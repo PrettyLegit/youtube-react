@@ -12,8 +12,8 @@ const App = () => {
         <a href="/">BruhTube</a>
       </header>
       <Router>
-        <SearchArea path="/"/>
-        <WatchArea path = "/watch/:id"/>
+        <SearchArea path="/" />
+        <WatchArea path="/watch/:id" />
       </Router>
     </div>
   );

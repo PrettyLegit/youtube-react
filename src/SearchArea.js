@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Results from "./Results";
 import axios from "axios";
+import * as AppConstant from "./AppConstant";
 
 const SearchArea = () => {
   const [keyword, setKeyword] = useState("word");
@@ -9,7 +10,7 @@ const SearchArea = () => {
   function requestSearch() {
     axios
       .get(
-        `https://youtube.googleapis.com/youtube/v3/search?type=video&q=${keyword}&part=snippet&maxResults=25&key=${process.env.API_KEY}`
+        `${AppConstant.SEARCH_URL}&q=${keyword}`
       )
       .then((res) => {
         const { items } = res.data;
